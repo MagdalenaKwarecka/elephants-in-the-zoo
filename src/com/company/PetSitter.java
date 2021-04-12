@@ -7,20 +7,17 @@ import java.util.Map;
 
 public class PetSitter {
 
-    int quantity;
-    int[] weight;
-    int[] currentSetting;
-    int[] targetSetting;
+    SettingsInformation settingsInformation;
 
-    public PetSitter(int quantity, int[] weight, int[] currentSetting, int[] targetSetting) {
-        this.quantity = quantity;
-        this.weight = weight;
-        this.currentSetting = currentSetting;
-        this.targetSetting = targetSetting;
+    public PetSitter(SettingsInformation settingsInformation) {
+        this.settingsInformation = settingsInformation;
     }
 
     public void work() {
-
+        int quantity = settingsInformation.quantity();
+        int[] weight = settingsInformation.weight();
+        int[] currentSetting = settingsInformation.currentSetting();
+        int[] targetSetting = settingsInformation.targetSetting();
         int power = 0;
 
         for (int i = 0; i < quantity; i++) {
@@ -49,13 +46,11 @@ public class PetSitter {
                     }
                 }
 
-
             }
 
         }
 
         System.out.println(power);
-
     }
 
     public static int changeCyclePower(List<Integer> a, int[] weight, int[] x, int[] y) {

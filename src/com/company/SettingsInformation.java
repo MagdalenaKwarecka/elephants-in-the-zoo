@@ -48,7 +48,6 @@ public class SettingsInformation {
         return newArray(infor(), 1, quantity());
     }
 
-
     public int[] currentSetting() {
         return newArray(infor(), 2, quantity());
     }

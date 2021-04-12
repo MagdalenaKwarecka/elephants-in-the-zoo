@@ -9,12 +9,12 @@ public class Main {
         String filename = "file.txt";
         SettingsInformation settingsInformation = new SettingsInformation(new File(filename));
 
-        int quantity = settingsInformation.quantity();
+        /*int quantity = settingsInformation.quantity();
         int[] weight = settingsInformation.weight();
         int[] currentSetting = settingsInformation.currentSetting();
-        int[] targetSetting = settingsInformation.targetSetting();
+        int[] targetSetting = settingsInformation.targetSetting();*/
 
-        PetSitter petSitter = new PetSitter(quantity, weight, currentSetting, targetSetting);
+        PetSitter petSitter = new PetSitter(settingsInformation);
         petSitter.work();
 
     }
